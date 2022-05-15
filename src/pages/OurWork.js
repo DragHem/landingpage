@@ -9,20 +9,26 @@ import { Link } from "react-router-dom";
 const OurWork = () => {
   return (
     <Work>
-      <Movie>
+      <Movie className="movie">
         <h2>The Athlete</h2>
         <div className="line"></div>
-        <img src={athlete} alt="Athlete" />
+        <Link to="/work/the-athlete">
+          <img src={athlete} alt="Athlete" />
+        </Link>
       </Movie>
-      <Movie>
+      <Movie className="movie">
         <h2>The Racer</h2>
         <div className="line"></div>
-        <img src={racer} alt="Racer" />
+        <Link to="/work/the-racer">
+          <img src={racer} alt="Racer" />
+        </Link>
       </Movie>
-      <Movie>
+      <Movie className="movie">
         <h2>Good Times</h2>
         <div className="line"></div>
-        <img src={goodtimes} alt="Goodtimes" />
+        <Link to="/work/good-times">
+          <img src={goodtimes} alt="Goodtimes" />
+        </Link>
       </Movie>
     </Work>
   );
@@ -39,10 +45,10 @@ const Work = styled.div`
 `;
 
 const Movie = styled.div`
-  padding-bottom: 10rem;
+  color: white;
   .line {
     height: 0.5rem;
-    background-color: #cccccc;
+    background-color: #23d997;
     margin-bottom: 3rem;
   }
   img {
