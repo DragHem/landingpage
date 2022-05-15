@@ -52,5 +52,8 @@ button {
         font-size:1.4rem;
         line-height: 150%;
     }
+    .movie:nth-of-type(2) {
+      padding: 10rem 0;
+    }
 `;
 export default GlobalStyle;
