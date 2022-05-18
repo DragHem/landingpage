@@ -4,9 +4,18 @@ import { About } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout } from "framer-motion";
 
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
+
 const FaqSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Faq>
+    <Faq
+      variants={scrollReveal}
+      ref={element}
+      animate={controls}
+      initial="hidden"
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
@@ -67,18 +76,18 @@ const Faq = styled(About)`
   .faq-line {
     background-color: #cccccc;
     height: 0.2rem;
-    margin: 2rem 0rem;
+    margin: 2rem 0;
     width: 100%;
   }
   .question {
-    padding: 3rem 0rem;
+    padding: 3rem 0;
     cursor: pointer;
   }
   .answer {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
   }
   p {
-    padding: 1rem 0rem;
+    padding: 1rem 0;
   }
 `;
 
