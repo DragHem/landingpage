@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html {
+  @media(max-width: 1700px) {
+    font-size: 75%;
+  }
+}
+
 body {
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
@@ -49,7 +55,7 @@ button {
         color: #23d997;
     }
     p {
-        padding: 3rem 0rem;
+        padding: 3rem 0;
         color: #ccc;
         font-size:1.4rem;
         line-height: 150%;
